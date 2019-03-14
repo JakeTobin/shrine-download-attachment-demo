@@ -1,49 +1,5 @@
-# Shrine Rails demo
 
 NOTE: Only the album thumbnail is using the download attachment passthrough. Create an album with name and image then view the root of the application again to see that the image is passing through /attachments
-
-Uploading:
-
-1. User selects one or more files
-2. The files get asynchronously uploaded directly to S3 and a progress bar is displayed
-3. The cached file data gets written to the hidden fields
-4. Once the form is submitted, background jobs are kicked off to process the images
-5. The records are saved with cached files, which are shown as fallback
-6. Once background jobs are finished, records are updated with processed attachment data
-
-Deleting:
-
-1. User marks photos for deletion and submits
-2. Deletion starts in background, and form submits instantly
-3. Background job finishes deleting
-
-This asynchronicity generally provides an ideal user experience, because the
-user doesn't have to wait for processing or deleting, and due to fallbacks
-they can be unaware of background jobs.
-
-Direct uploads and backgrounding also have performance advantages, since your
-app doesn't have to receive file uploads (as files are uploaded directly to S3),
-and the web workers aren't blocked by processing, storing or deleting.
-
-## Implementation
-
-In production environment files are uploaded directly to S3, while in
-development and test environment they are uploaded to the app and stored on
-disk. The demo features both single and multiple uploads.
-
-On the client side [Uppy] is used for handling file uploads. The complete
-JavaScript implementation for the demo can be found in
-[application.js](/app/assets/javascripts/application.js).
-
-## Requirements
-
-To run the app you need to setup the following things:
-
-* Install ImageMagick:
-
-  ```rb
-  $ brew install imagemagick
-  ```
 
 * Install the gems:
 
