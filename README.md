@@ -1,6 +1,8 @@
 
 NOTE: Only the album thumbnail is using the download attachment passthrough. Create an album with name and image then view the root of the application again to see that the image is passing through /attachments
 
+https://github.com/shrinerb/shrine/blob/v2.16.0/doc/plugins/download_endpoint.md#readme
+
 * Install the gems:
 
   ```rb
