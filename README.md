@@ -1,7 +1,6 @@
 # Shrine Rails demo
 
-This is a Rails demo for [Shrine]. It allows the user to create albums and
-attach images. The demo shows an advanced workflow:
+NOTE: Only the album thumbnail is using the download attachment passthrough. Create an album with name and image then view the root of the application again to see that the image is passing through /attachments
 
 Uploading:
 
