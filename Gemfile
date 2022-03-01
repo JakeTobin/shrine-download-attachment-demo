@@ -15,7 +15,7 @@ gem 'httplog'
 # Shrine
 gem 'shrine', '~> 2.11'
 gem 'aws-sdk-s3', '~> 1.2'
-gem 'image_processing', '~> 1.0'
+gem 'image_processing', '~> 1.12'
 
 group :development, :test do
   gem 'byebug'
